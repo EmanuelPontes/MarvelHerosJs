@@ -2,21 +2,10 @@
 
 function ContentController($scope, heroesService) {
 
-    heroesService.getByName("a").then(function (response) {
+    $scope.heroName = ""
 
-        var results = response.data.data.results;
-        $scope.heros =  results.map(function (result) {
-                return {
-                    id: result.id,
-                    imgUrl: result.thumbnail ? result.thumbnail.path + "." + result.thumbnail.extension : '',
-                    name: result.name,
-                    description: result.description,
-                }
-            });
-        return $scope.heros.map(function(hero) { return hero.name});
-    })
-    $scope.getCharacters = function(val) {
-        return heroesService.getByName(val ? val : "a").then(function (response) {
+    this.$onInit = function() {
+        heroesService.getByName("a").then(function (response) {
 
             var results = response.data.data.results;
             $scope.heros =  results.map(function (result) {
@@ -28,6 +17,23 @@ function ContentController($scope, heroesService) {
                     }
                 });
             return $scope.heros.map(function(hero) { return hero.name});
+        })
+    }
+    
+
+    $scope.onKeyUp = function() {
+        heroesService.getByName($scope.heroName).then(function (response) {
+
+            var results = response.data.data.results;
+            $scope.heros =  results.map(function (result) {
+                    return {
+                        id: result.id,
+                        imgUrl: result.thumbnail ? result.thumbnail.path + "." + result.thumbnail.extension : '',
+                        name: result.name,
+                        description: result.description,
+                    }
+                });
+           
         })
     }
     

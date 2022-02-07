@@ -1,7 +1,19 @@
 <h4>Search for your Marvel Characters</h4>
-<input type="text" 
-    ng-model="asyncSelected" 
-    placeholder="Search for you character"
-    typeahead="characters for characters in getCharacters($viewValue)" 
-    typeahead-loading="loadingCharacters" class="form-control">
-<heros-table heros="heros"></heros-table>
+
+<div class="container">
+    <div class="form-group row">
+        <div class="col-sm-4">
+            <input type="text" 
+            ng-model="heroName"  
+            ng-model-options="{ debounce: 300 }"   
+            ng-change="onKeyUp()"
+            placeholder="Search for character"
+            class="form-control">     
+        </div>
+        
+    </div>
+    <div class="row pt-5">
+        <heros-table heros="heros"></heros-table>
+    </div>
+</div>
+

@@ -1,7 +1,7 @@
 .main-page-grid {
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 1fr 14fr 1fr;
+    grid-template-rows: 0.3fr 14fr 1fr;
     grid-template-areas:
         "main-header main-header main-header"
         "... main-content ..."
