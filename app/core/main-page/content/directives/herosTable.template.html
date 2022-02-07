@@ -1,0 +1,34 @@
+
+
+<div class="table-responsive-sm">
+    <table class="table  align-middle">
+        <thead>
+            <tr>
+                <th>
+
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="hero in heros">
+                <td>
+                    <img src="{{hero.imgUrl}}" alt="hero image" srcset="" style="width: 100%;
+                        height: auto; max-width: 400px;">
+                    
+                </td>
+                <td>
+                    {{hero.name}}
+                </td>
+                <td>
+                    {{hero.description}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
