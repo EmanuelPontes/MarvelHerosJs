@@ -10,3 +10,7 @@ para saber mais detalhes sobre ele (GET /v1/public/characters/{characterId}),
  tais como: Nome, Foto e a lista de quadrinhos.  
  Fique à vontade para incrementar o aplicativo 
  com o uso de outras APIs disponíveis.
+ 
+ 
+ todo: busca e vizualização de detalhes de cada heroi
+ 
