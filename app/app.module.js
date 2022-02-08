@@ -5,6 +5,7 @@ angular.module('marvelHeroesApp', [
   'ngRoute',
   'mainPage',
   'servicesModule',
+  'version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
