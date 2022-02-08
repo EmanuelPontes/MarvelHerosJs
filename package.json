@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "marvel-heros-js",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "Search for marvel heroes!",
+  "repository": "https://github.com/EmanuelPontes/MarvelHerosJs.git",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.7.5",
