@@ -16,7 +16,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="hero in heros">
+            <tr ng-repeat="hero in heros" ng-click="detail({$event: $event, id:hero.id})">
                 <td>
                     <img src="{{hero.imgUrl}}" alt="hero image" srcset="" style="width: 100%;
                         height: auto; max-width: 400px;">

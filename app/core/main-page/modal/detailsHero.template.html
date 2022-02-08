@@ -1,0 +1,42 @@
+<md-dialog aria-label="List dialog">
+    <md-dialog-content>
+        <div class="md-dialog-content">
+
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex justify-content-between">
+                        <img src="{{heroInfo.imgUrl}}" alt="hero image" srcset="" style="width: 100%;
+                height: auto; max-width: 400px;">
+                        
+                        <div class="d-flex flex-column ms-5">
+                            <h4 class="card-title ">
+                                {{heroInfo.name}}
+                            </h4>
+                            <p class="text-left mt-3">
+                                {{heroInfo.description}}
+                            </p>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        Comics:
+                    </div>
+                    <div class="d-flex flex-column">
+                        <span ng-repeat="comic in heroInfo.comics.items">
+                            {{comic.name}}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </md-dialog-content>
+    <md-dialog-actions>
+        <md-button ng-click="closeDialog()" class="md-primary">Close Dialog</md-button>
+    </md-dialog-actions>
+</md-dialog>
