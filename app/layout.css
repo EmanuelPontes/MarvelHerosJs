@@ -1,11 +1,13 @@
 .main-page-grid {
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 0.3fr 14fr 1fr;
+    grid-template-rows: 0.7fr 18fr 0.3fr;
     grid-template-areas:
         "main-header main-header main-header"
         "... main-content ..."
         "main-footer main-footer main-footer" !important;
+
+    min-height: 100vh;
 }
 
 main-header {
@@ -18,6 +20,8 @@ main-content {
     grid-area: main-content !important;
     padding: 0 !important;
     width: 100%;
+    min-height: 100vh;
+     height: 100%;
 }
 
 main-footer {
