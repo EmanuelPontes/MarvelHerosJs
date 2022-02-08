@@ -7,7 +7,7 @@ angular.module('mainPage').directive('herosTable', function() {
             heros: '=',
             detail: '&onDetail',
         },
-        templateUrl: 'core/main-page/content/directives/herosTable.template.html',
+        templateUrl: 'core/main-page/directives/herosTable.template.html',
         link: function(scope, element, att) {
             
         }

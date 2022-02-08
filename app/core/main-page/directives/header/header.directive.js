@@ -6,6 +6,6 @@ angular.module('mainPage').directive('mainHeader', function() {
         scope: {
             headerData: '=header'
         },
-        templateUrl: 'core/main-page/header/header.template.html',
+        templateUrl: 'core/main-page/directives/header/header.template.html',
     }
 })
