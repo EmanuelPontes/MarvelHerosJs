@@ -91,6 +91,6 @@ function ContentController($scope, $mdDialog, heroesService) {
 }
 
 angular.module('mainPage').component('mainContent', {
-    templateUrl: 'core/main-page/content/content.template.html',
+    templateUrl: 'core/main-page/components/content/content.template.html',
     controller: ['$scope', '$mdDialog', 'heroesService', ContentController],
 });
