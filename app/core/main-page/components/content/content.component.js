@@ -18,7 +18,10 @@ function ContentController($scope, $mdDialog, heroesService) {
                 }
             });
             return $scope.heros.map(function (hero) { return hero.name });
-        })
+        }, function (response) {
+            $scope.heros = [];
+        }
+        )
     }
 
 
@@ -35,7 +38,10 @@ function ContentController($scope, $mdDialog, heroesService) {
                 }
             });
 
-        })
+        }, function (response) {
+            $scope.heros = [];
+        }
+        )
     }
 
     $scope.onDetail = function (event, id) {
@@ -50,6 +56,8 @@ function ContentController($scope, $mdDialog, heroesService) {
                     comics: result.comics
                 }
             }));
+        },function (response) {
+            
         })
     }
 

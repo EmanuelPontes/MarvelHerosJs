@@ -15,7 +15,7 @@
                 </th>
             </tr>
         </thead>
-        <tbody>
+        <tbody >
             <tr ng-repeat="hero in heros" ng-click="detail({$event: $event, id:hero.id})">
                 <td>
                     <img src="{{hero.imgUrl}}" alt="hero image" srcset="" class="responsive-img">
@@ -28,6 +28,11 @@
                     {{hero.description}}
                     
                 </td>
+            </tr>
+            <tr ng-if="heros.length === 0">
+                <td colspan="3" class="text-center" style="text-align: center">
+                    Sorry, We could not find any heroes
+                </td> 
             </tr>
         </tbody>
     </table>

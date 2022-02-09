@@ -48,6 +48,11 @@ tbody {
   border: none;
 }
 
+@font-face {
+  font-family: marvelFont;
+  src: url('assets/fonts/KungFuMaster3D-rg5MB.otf');
+}
+
 tr {
   border: none;
 }
